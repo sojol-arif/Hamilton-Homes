@@ -1,0 +1,68 @@
+
+
+#ic-sell-top-right{
+    ul{
+        margin:0;
+        padding:0;
+        display: flex;
+        justify-content: space-between;
+        li{
+            list-style-type: none;
+            display: inline-block;
+            a{
+                text-transform: uppercase;
+                display: block;
+                position: relative;
+                text-align: center;
+                padding-top: 8px;
+                padding-bottom: 12px;
+                padding-left: 50px;
+                padding-right: 50px;
+                font-weight: 600;
+                span{
+                    display: block;
+                    height: 1px;
+                    width: 30px;
+                    border-bottom:1px dashed $primary;
+                    position: relative;
+                    left:50%;
+                    transform: translateX(-50%);
+                    padding-top: 10px;
+                }
+            }
+            &.active{
+                a{
+                    background-color: $secondary;
+                    color:$white;
+                    span{
+                        border-color: #fff;
+                    }
+                }
+                &:hover{
+                    a{
+                        color:#fff;
+                    }
+                }
+            }
+            &:hover{
+                a{
+                    color:$primary;
+                }
+            } 
+        }
+    }
+}
+#ic-sell-bottom{
+    background-color:$box-color;
+    h1{
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+    p{
+        font-weight: 300;
+        margin-bottom: 28px;
+    }
+    a{
+        font-weight: 600;
+    }
+}

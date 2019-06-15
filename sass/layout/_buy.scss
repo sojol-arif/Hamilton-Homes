@@ -1,0 +1,147 @@
+#ic-buy{
+    h1{
+        margin-bottom: 25px;
+    }
+    #search-box{
+        display: flex;
+        justify-content: space-between;
+        #searchCity,
+        #buy-filter{
+            .theme-select select,
+            .form-control,
+            ul#buy-filter-price,
+            #ic-advanced-search{
+                background-color: $box-color;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 50px;
+                height: 50px;
+                color: $primary;
+                padding:0;
+                border:none;
+                padding-left: 25px;
+                padding-right: 25px;
+                text-transform: capitalize;
+            }
+        }
+        #searchCity{
+            flex-basis: 352px;
+            margin-right: 30px;
+        }
+        #buy-filter{
+            .ic-col{
+                margin-bottom: 30px;
+            }
+            .theme-select{
+                // flex-basis: 160px;
+            }
+            form{
+                .row{
+                    display: flex;
+                }
+            }
+            #ic-advanced-search{
+                background-color: $primary;
+                color:$white;
+            }
+            ul#buy-filter-price{
+                padding:0;
+                margin:0;
+                li{
+                    list-style-type: none;
+                    a{
+                        padding-left: 25px;
+                        padding-right: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+#buy-map{
+    margin-bottom: 30px;
+    iframe{
+        display: block;
+    }
+}
+#map-result{
+    margin-top:30px;
+}
+.single-buy-map{
+    cursor: pointer;
+    .buy-img-part{
+        position: relative;
+        img{
+            width:100%;
+            height: auto;
+        }
+        .text{
+            position: absolute;
+            top:0;
+            left: 0;
+            padding:10px;
+            background-color: #20b96c;
+            text-transform: capitalize;
+            color:#fff;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+    .buy-text-part{
+        margin-bottom: 40px;
+        @include transition(box-shadow .3s ease-in-out);
+        p.price{
+            font-weight: 600;
+            padding-top: 12px;
+            @include transition(color .3s ease-in-out);
+        }
+        nav.buy-bed-bath{
+            .page-item:first-child .page-link {
+                border-top-left-radius:0;
+                border-bottom-left-radius:0;
+            }
+            ol{
+                margin:0;
+                padding-right: 0;
+                padding-left:0;
+                background-color: transparent;
+                padding-top: 0px;
+                padding-bottom: 4px;
+                li{
+                    font-weight: 600;
+                    color:$primary;
+                    @include transition(color .3s ease-in-out);
+                    text-transform: capitalize;
+                    a{
+                        color:$primary;
+                        @include transition(color .3s ease-in-out);
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+        p.area{
+            @include heading-font-light;
+            text-transform: capitalize;
+        }
+        
+    }
+    &:hover{
+        p.price,
+        nav.buy-bed-bath ol li,
+        nav.buy-bed-bath ol li a,
+        {
+            color:$secondary;
+        }
+        .breadcrumb-item+.breadcrumb-item::before {
+            color: $secondary;
+        }
+    }
+}
+
+@media only screen and (min-width:768px){
+    #map-result{
+        margin-top:0;
+    }
+}
