@@ -17,17 +17,61 @@
                     <h3>Property Valuation</h3>
                     <p>Thinking about selling your home? It's important to know how much your property is worth in today's market to choose an appropriate selling price.</p>
                     <form class="needs-validation" novalidate>
-                        <div class="form-row">
-                            <div class="col-md-6 mb-3">
-                                <label for="validationCustom01">Beds</label>
-                                
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="validationCustom02">Baths</label>
-                                <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+                        <div class="input-group flex-nowrap mb-3">
+                            <input type="text" class="form-control" placeholder="Enter Your Location" aria-label="Username" aria-describedby="addon-wrapping">
+                            <div class="input-group-prepend">
+                                <button class="input-group-text locate-btn"  id="addon-wrapping" aria-hidden="true">Locate</button>
                             </div>
                         </div>
-                        <button class="btn btn-primary" type="submit">Submit form</button>
+                        <div class="form-group">
+                            <span class="theme-select">
+                                <select class="form-control search_option" name="search_option">
+                                    <option value="low_to_high">Select Property Category Type</option>
+                                    <option value="high_to_low">Select Property Category Type</option>
+                                </select>
+                            </span>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="validationCustom01">Beds</label>
+                                <span class="theme-select">
+                                    <select class="form-control search_option" name="search_option">
+                                        <option value="low_to_high">Select Beds</option>
+                                        <option value="high_to_low">Select Beds</option>
+                                    </select>
+                                </span>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                            <label for="validationCustom01">Baths</label>
+                                <span class="theme-select">
+                                    <select class="form-control search_option" name="search_option">
+                                        <option value="low_to_high">Select Baths</option>
+                                        <option value="high_to_low">Select Baths</option>
+                                    </select>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <label for="validationCustom01">sq.ft</label>
+                                <span class="theme-select">
+                                    <select class="form-control search_option" name="search_option">
+                                        <option value="low_to_high">Select Beds</option>
+                                        <option value="high_to_low">Select Beds</option>
+                                    </select>
+                                </span>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                            <label for="validationCustom01">condition</label>
+                                <span class="theme-select">
+                                    <select class="form-control search_option" name="search_option">
+                                        <option value="low_to_high">Select Baths</option>
+                                        <option value="high_to_low">Select Baths</option>
+                                    </select>
+                                </span>
+                            </div>
+                        </div>
+                        <button class="ic-btn-black btn submit-btn-sell" type="submit">Submit form</button>
                     </form>
                 </div>   
             </div>

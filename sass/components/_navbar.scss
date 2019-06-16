@@ -463,8 +463,8 @@ header{
                         background-color: transparent;
                         position: relative;
                         margin-right: 0px;
-                        padding-left: 1.5rem !important;
-                        padding-right: 1.5rem !important;
+                        padding-left: 15px !important;
+                        padding-right: 15px !important;
                         @include transition(color .2s);
                         &:hover{
                             color:$secondary;
@@ -495,12 +495,14 @@ header{
                         padding-top:20px;
                         padding-bottom: 20px;
                         li{
-                            
+                            display: block;
                             a{
                                 font-weight: 600;
                                 color:$white;
                                 text-transform: 
                                 capitalize;
+                                padding-left: 15px;
+                                padding-right: 15px;
                                 background-color: transparent;
                                 &::after{
                                     background-color:transparent;

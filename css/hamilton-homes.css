@@ -555,8 +555,8 @@ header {
           background-color: transparent;
           position: relative;
           margin-right: 0px;
-          padding-left: 1.5rem !important;
-          padding-right: 1.5rem !important;
+          padding-left: 15px !important;
+          padding-right: 15px !important;
           -webkit-transition: color 0.2s;
           -moz-transition: color 0.2s;
           -ms-transition: color 0.2s;
@@ -578,18 +578,22 @@ header {
             padding: 0;
             padding-top: 20px;
             padding-bottom: 20px; }
-            header nav.ic-navbar ul.navbar-nav li.dropdown ul.dropdown-menu li a {
-              font-weight: 600;
-              color: #fff;
-              text-transform: capitalize;
-              background-color: transparent; }
-              header nav.ic-navbar ul.navbar-nav li.dropdown ul.dropdown-menu li a::after {
+            header nav.ic-navbar ul.navbar-nav li.dropdown ul.dropdown-menu li {
+              display: block; }
+              header nav.ic-navbar ul.navbar-nav li.dropdown ul.dropdown-menu li a {
+                font-weight: 600;
+                color: #fff;
+                text-transform: capitalize;
+                padding-left: 15px;
+                padding-right: 15px;
                 background-color: transparent; }
-              header nav.ic-navbar ul.navbar-nav li.dropdown ul.dropdown-menu li a::before {
-                background-color: transparent; }
-              header nav.ic-navbar ul.navbar-nav li.dropdown ul.dropdown-menu li a:hover {
-                color: #010101;
-                text-decoration: underline !important; }
+                header nav.ic-navbar ul.navbar-nav li.dropdown ul.dropdown-menu li a::after {
+                  background-color: transparent; }
+                header nav.ic-navbar ul.navbar-nav li.dropdown ul.dropdown-menu li a::before {
+                  background-color: transparent; }
+                header nav.ic-navbar ul.navbar-nav li.dropdown ul.dropdown-menu li a:hover {
+                  color: #010101;
+                  text-decoration: underline !important; }
       header nav.ic-navbar ul.first-child {
         background-color: transparent;
         padding-top: 0;
@@ -1137,7 +1141,8 @@ footer #footer-bottom {
       width: 40px; }
 
 .modal.ic-login-register .modal-dialog {
-  width: 505px; }
+  width: 505px;
+  padding-top: 100px; }
   .modal.ic-login-register .modal-dialog .modal-content {
     border-radius: 0; }
     .modal.ic-login-register .modal-dialog .modal-content .modal-header {
@@ -1593,38 +1598,63 @@ nav.ic-breadcrumb {
     color: #010101;
     padding: 0;
     border: none;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
     text-transform: capitalize; }
   #ic-buy #search-box #searchCity {
-    flex-basis: 352px;
+    flex-basis: 365px;
     margin-right: 30px; }
-  #ic-buy #search-box #buy-filter .ic-col {
-    margin-bottom: 30px; }
-  #ic-buy #search-box #buy-filter form .row {
-    display: flex; }
-  #ic-buy #search-box #buy-filter #ic-advanced-search {
-    background-color: #010101;
-    color: #fff; }
-  #ic-buy #search-box #buy-filter ul#buy-filter-price {
-    padding: 0;
-    margin: 0; }
-    #ic-buy #search-box #buy-filter ul#buy-filter-price li {
-      list-style-type: none; }
-      #ic-buy #search-box #buy-filter ul#buy-filter-price li a {
-        padding-left: 25px;
-        padding-right: 25px; }
+    #ic-buy #search-box #searchCity input.form-control {
+      font-weight: 300; }
+  #ic-buy #search-box #buy-filter {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; }
+    #ic-buy #search-box #buy-filter .row {
+      display: flex;
+      justify-content: space-between;
+      width: 100%; }
+      #ic-buy #search-box #buy-filter .row .ic-col {
+        flex-grow: 1;
+        flex-basis: 100px;
+        margin-bottom: 30px; }
+        #ic-buy #search-box #buy-filter .row .ic-col:last-child {
+          flex-grow: 2; }
+    #ic-buy #search-box #buy-filter #ic-advanced-search {
+      background-color: #010101;
+      color: #fff; }
+    #ic-buy #search-box #buy-filter ul#buy-filter-price {
+      padding: 0;
+      margin: 0; }
+      #ic-buy #search-box #buy-filter ul#buy-filter-price li {
+        list-style-type: none;
+        text-align: left; }
+      #ic-buy #search-box #buy-filter ul#buy-filter-price li.buy-dropdown {
+        cursor: pointer;
+        list-style-type: none;
+        position: relative; }
+        #ic-buy #search-box #buy-filter ul#buy-filter-price li.buy-dropdown > .price-buy-filter {
+          padding-left: 10px; }
+          #ic-buy #search-box #buy-filter ul#buy-filter-price li.buy-dropdown > .price-buy-filter:hover {
+            color: #010101; }
 
 #buy-map {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  height: 600px; }
   #buy-map iframe {
-    display: block; }
+    display: block;
+    height: 600px; }
 
 #map-result {
   margin-top: 30px; }
 
 .single-buy-map {
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition: box-shadow 0.3s ease-in-out;
+  -moz-transition: box-shadow 0.3s ease-in-out;
+  -ms-transition: box-shadow 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out; }
   .single-buy-map .buy-img-part {
     position: relative; }
     .single-buy-map .buy-img-part img {
@@ -1643,11 +1673,11 @@ nav.ic-breadcrumb {
       font-weight: 600; }
   .single-buy-map .buy-text-part {
     margin-bottom: 40px;
-    -webkit-transition: box-shadow 0.3s ease-in-out;
-    -moz-transition: box-shadow 0.3s ease-in-out;
-    -ms-transition: box-shadow 0.3s ease-in-out;
-    -o-transition: box-shadow 0.3s ease-in-out;
-    transition: box-shadow 0.3s ease-in-out; }
+    -webkit-transition: padding-left 0.1s linear, padding-right 0.1s linear, padding-bottom 0.1s linear;
+    -moz-transition: padding-left 0.1s linear, padding-right 0.1s linear, padding-bottom 0.1s linear;
+    -ms-transition: padding-left 0.1s linear, padding-right 0.1s linear, padding-bottom 0.1s linear;
+    -o-transition: padding-left 0.1s linear, padding-right 0.1s linear, padding-bottom 0.1s linear;
+    transition: padding-left 0.1s linear, padding-right 0.1s linear, padding-bottom 0.1s linear; }
     .single-buy-map .buy-text-part p.price {
       font-weight: 600;
       padding-top: 12px;
@@ -1687,16 +1717,184 @@ nav.ic-breadcrumb {
       font-family: 'Titillium Web', sans-serif;
       font-weight: 300;
       text-transform: capitalize; }
-  .single-buy-map:hover p.price,
-  .single-buy-map:hover nav.buy-bed-bath ol li,
-  .single-buy-map:hover nav.buy-bed-bath ol li a {
-    color: #df1b24; }
-  .single-buy-map:hover .breadcrumb-item + .breadcrumb-item::before {
-    color: #df1b24; }
+  .single-buy-map:hover {
+    box-shadow: -4px 0px 14.72px 1.28px rgba(1, 1, 1, 0.1); }
+    .single-buy-map:hover p.price,
+    .single-buy-map:hover nav.buy-bed-bath ol li,
+    .single-buy-map:hover nav.buy-bed-bath ol li a {
+      color: #df1b24; }
+    .single-buy-map:hover .breadcrumb-item + .breadcrumb-item::before {
+      color: #df1b24; }
+    .single-buy-map:hover .buy-text-part {
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px; }
+
+ul.buy-dropdown-menu {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  width: 210px;
+  display: none;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  z-index: 1; }
+  ul.buy-dropdown-menu li {
+    display: inline-block;
+    padding-left: 5px; }
+    ul.buy-dropdown-menu li input {
+      width: 80px;
+      border: none;
+      padding-left: 3px;
+      padding-right: 3px; }
+    ul.buy-dropdown-menu li ::-webkit-input-placeholder {
+      /* Edge */
+      color: #010101;
+      font-size: 12px;
+      font-weight: 300; }
+    ul.buy-dropdown-menu li :-ms-input-placeholder {
+      /* Internet Explorer */
+      color: #010101;
+      font-size: 12px;
+      font-weight: 300; }
+    ul.buy-dropdown-menu li ::placeholder {
+      color: #010101;
+      font-size: 12px;
+      font-weight: 300; }
+
+#ic-advance-filter {
+  display: none; }
+  #ic-advance-filter .ic-single-max-min {
+    margin-top: 40px;
+    margin-bottom: 20px; }
+    #ic-advance-filter .ic-single-max-min ul.buy-dropdown-menu {
+      display: block;
+      box-shadow: none;
+      position: relative;
+      width: 100%; }
+  #ic-advance-filter h5.checkobx-heading {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px; }
+  #ic-advance-filter .checkbox-buy-filter {
+    width: 33.33%; }
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  margin-top: 5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transiton: all 0.3s;
+  -moz-transiton: all .3s;
+  -o-transiton: all .3s;
+  transition: all .3s;
+  padding-left: 30px; }
+  .checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0; }
+  .checkbox-container input:checked ~ .checkmark {
+    background-color: #202020; }
+  .checkbox-container .checkmark {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    border: 1px solid #010101; }
+    .checkbox-container .checkmark:after {
+      content: "";
+      position: absolute;
+      display: block;
+      transition: transform 1s;
+      -webkit-transition: transform 1s;
+      left: 4px;
+      top: 2px;
+      width: 5px;
+      height: 8px;
+      border: solid #fff;
+      border-width: 0 2px 2px 0; }
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
 
 @media only screen and (min-width: 768px) {
   #map-result {
-    margin-top: 0; } }
+    margin-top: 0; }
+
+  #buy-map {
+    height: 700px;
+    margin-bottom: 0px; }
+    #buy-map iframe {
+      height: 700px; }
+
+  #ic-advance-filter .checkbox-buy-filter {
+    width: 25%; } }
+@media only screen and (min-width: 992px) {
+  #buy-map {
+    height: 800px; }
+    #buy-map iframe {
+      height: 800px; } }
+@media only screen and (min-width: 992px) {
+  #buy-map {
+    height: 1000px; }
+    #buy-map iframe {
+      height: 1000px; } }
+#ic-sell-top-left {
+  padding: 55px 30px 60px;
+  box-shadow: -4px 0px 14.72px 1.28px rgba(1, 1, 1, 0.1);
+  margin-bottom: 45px; }
+  #ic-sell-top-left h1 {
+    font-weight: bold; }
+  #ic-sell-top-left p {
+    margin-bottom: 25px;
+    font-weight: 300; }
+  #ic-sell-top-left form .form-control {
+    background-color: #f4f4f4;
+    border: none;
+    font-weight: 300; }
+  #ic-sell-top-left form .input-group-text.locate-btn {
+    background-color: #010101;
+    color: #fff;
+    cursor: pointer;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+    font-weight: 600; }
+    #ic-sell-top-left form .input-group-text.locate-btn:hover {
+      background-color: #676767; }
+  #ic-sell-top-left form label {
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase; }
+  #ic-sell-top-left form .submit-btn-sell {
+    text-transform: uppercase; }
+  #ic-sell-top-left form ::-webkit-input-placeholder {
+    /* Edge */
+    color: #010101; }
+  #ic-sell-top-left form :-ms-input-placeholder {
+    /* Internet Explorer */
+    color: #010101; }
+  #ic-sell-top-left form ::placeholder {
+    color: #010101; }
+  #ic-sell-top-left form .submit-btn-sell {
+    font-weight: 300; }
+  #ic-sell-top-left form select * {
+    font-weight: 300; }
+
 #ic-sell-top-right ul {
   margin: 0;
   padding: 0;
@@ -1712,8 +1910,8 @@ nav.ic-breadcrumb {
       text-align: center;
       padding-top: 8px;
       padding-bottom: 12px;
-      padding-left: 50px;
-      padding-right: 50px;
+      padding-left: 25px;
+      padding-right: 25px;
       font-weight: 600; }
       #ic-sell-top-right ul li a span {
         display: block;
@@ -1745,4 +1943,10 @@ nav.ic-breadcrumb {
   #ic-sell-bottom a {
     font-weight: 600; }
 
-/*# sourceMappingURL=hamilton-homes.css.map */
+@media only screen and (min-width: 1200px) {
+  #ic-sell-top-left {
+    margin-bottom: 0; }
+
+  #ic-sell-top-right ul li a {
+    padding-left: 50px;
+    padding-right: 50px; } }
